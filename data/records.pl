@@ -1,1 +1,1 @@
-{"date": "04/02/2017", "minutes": "20", "tags": ["programming", "work", "fun", "lolz"]}
+{"date": "04/02/2017", "minutes": "parse_machine.py", "tags": ["40", "groceries"]}
