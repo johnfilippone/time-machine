@@ -1,5 +1,3 @@
 add usage to parser machine
-create alias for parser machine use
-make parser machine executable?
 find a way to use SMS to call parser machine
 only allow integers for the first arg of parser machine
