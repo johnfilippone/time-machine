@@ -14,6 +14,17 @@ def add_record(args):
     with open("../data/records.pl", "a") as f:
         f.write(json.dumps(record) + "\n")
 
+def get_todays_records(records):
+    """ returns the set of the records that were recorded today """
+
+    todays_records = []
+
+    for line in records:
+        record = json.loads(line) 
+        if record["date"] == time.strftime("%d/%m/%Y"):
+            todays_records.append(line)
+    return todays_records
+
 def generate_csv(records):
     """ pulls records from file and turns them into a csv file that D3.js can understand """
 
@@ -42,6 +53,8 @@ def record_reduce(records, valid_tags):
         record = json.loads(line) 
         aggregated_records[" - ".join(record["tags"])] += int(record["minutes"])
     
+    # add grey time: time not logged today
+    aggregated_records["grey-time"] = 1440 - sum(time_used for time_used in aggregated_records.values())
     return aggregated_records
 
 
@@ -52,7 +65,8 @@ if __name__ == "__main__":
     # pull records and generate csv for D3.js pi chart
     with open("../data/records.pl", "r") as f:
         records = f.readlines()
-    generate_csv(records)
+
+    generate_csv(get_todays_records(records))
 
     
  
