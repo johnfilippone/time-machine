@@ -13,7 +13,7 @@ def add_record(args):
         "minutes": args[0],
         "tags": args[1:]}
 
-    with open("../data/records.pl", "a") as f:
+    with open("/home/filippone/repos/time-machine/data/records.pl", "a") as f:
         f.write(json.dumps(record) + "\n")
 
 def get_todays_records(records):
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     add_record(sys.argv[1:])
 
     # pull records and generate csv for D3.js pi chart
-    with open("../data/records.pl", "r") as f:
+    with open("/home/filippone/repos/time-machine/data/records.pl", "r") as f:
         records = f.readlines()
 
     generate_csv(get_todays_records(records))
