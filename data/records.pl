@@ -6,3 +6,9 @@
 {"date": "04/02/2017", "minutes": "20", "tags": ["prioritizing"]}
 {"date": "04/02/2017", "minutes": "10", "tags": ["thinking"]}
 {"date": "04/02/2017", "minutes": "120", "tags": ["lifing-weights"]}
+{"date": "04/02/2017", "minutes": "15", "tags": ["time-machine"]}
+{"date": "04/02/2017", "minutes": "30", "tags": ["singing"]}
+{"date": "04/02/2017", "minutes": "150", "tags": ["stats"]}
+{"date": "05/02/2017", "minutes": "360", "tags": ["sleep"]}
+{"date": "05/02/2017", "minutes": "60", "tags": ["chillin"]}
+{"date": "05/02/2017", "minutes": "30", "tags": ["chillin"]}
