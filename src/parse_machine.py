@@ -30,16 +30,13 @@ def get_todays_records(records):
 def generate_csv(records):
     """ pulls records from file and turns them into a csv file that D3.js can understand """
 
-    # add csv table headers
-    with open("/var/www/html/time-machine.csv", "w") as f:
-        f.write("tag,population\n")
-
     # aggregate similar tags
     valid_tags = set([" - ".join(json.loads(record)["tags"]) for record in records])
     aggregated_records = record_reduce(records, valid_tags)
 
     # write each entry in the aggregated_records dict to a row in the csv table
     with open("/var/www/html/time-machine.csv", "a") as f:
+        f.write("tag,population\n")
         for tag, minutes in aggregated_records.iteritems():
             f.write(str(tag) + "," + str(minutes) + "\n")
 
@@ -57,17 +54,21 @@ def record_reduce(records, valid_tags):
     
     # add grey time: time not logged today
     aggregated_records["grey-time"] = 1440 - sum(time_used for time_used in aggregated_records.values())
+
     return aggregated_records
 
 
 if __name__ == "__main__":
 
+    
     add_record(sys.argv[1:])
+
+    # clear csv file
+    open("/var/www/html/time-machine.csv", "w").close()
 
     # pull records and generate csv for D3.js pi chart
     with open("/home/filippone/repos/time-machine/data/records.pl", "r") as f:
         records = f.readlines()
-
     generate_csv(get_todays_records(records))
 
     
