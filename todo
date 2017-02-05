@@ -1,6 +1,15 @@
-add usage to parser machine
-find a way to use SMS to call parser machine
-only allow integers for the first arg of parser machine
-move web page into repo and put sym link in apache
-generalize grey time to work for the timespan of the given records
-add unit tests
+important
+  find a way to use SMS to call parser machine
+  generalize grey time to work for the timespan of the given records
+  add unit tests
+
+organization
+  move secondary functions out to function libraries
+  move web page into repo and put sym link in apache
+
+error checking
+  only allow integers for the first arg of parser machine
+  check that there isn't more than 24 hours of logging in one day
+    
+extra    
+  add usage to parser machine
