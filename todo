@@ -1,3 +1,4 @@
 add usage to parser machine
 find a way to use SMS to call parser machine
 only allow integers for the first arg of parser machine
+move web page into repo and put sym link in apache
