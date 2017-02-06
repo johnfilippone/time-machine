@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-
-.arc text {
-  font: 10px sans-serif;
-  text-anchor: middle;
-}
-
-.arc path {
-  stroke: #fff;
-}
-
-</style>
-<html>
-<body>
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script>
 var width = 960,
     height = 500,
     radius = Math.min(width, height) / 2;
@@ -41,7 +23,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-d3.csv("time-machine.csv", type, function(error, data) {
+d3.csv("data/time-machine.csv", type, function(error, data) {
   if (error) throw error;
 
   var g = svg.selectAll(".arc")
@@ -54,16 +36,13 @@ d3.csv("time-machine.csv", type, function(error, data) {
       .style("fill", function(d) { return color(d.data.tag); });
 
   g.append("text")
-      .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-      .attr("dy", ".35em")
-      .text(function(d) { return d.data.tag; });
-});
+  .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
+  .attr("dy", ".35em")
+        .text(function(d) { return d.data.tag; });
+  });
 
-function type(d) {
-  d.population = +d.population;
-  return d;
-}
+  function type(d) {
+    d.population = +d.population;
+    return d;
+  }
 
-</script>
-</body>
-</html>

@@ -24,3 +24,8 @@
 {"date": "05/02/2017", "minutes": "20", "tags": ["p3"]}
 {"date": "05/02/2017", "minutes": "10", "tags": ["p3"]}
 {"date": "05/02/2017", "minutes": "35", "tags": ["p3"]}
+{"date": "06/02/2017", "minutes": "15", "tags": ["walking"]}
+{"date": "06/02/2017", "minutes": "480", "tags": ["sleeping"]}
+{"date": "06/02/2017", "minutes": "40", "tags": ["chillin"]}
+{"date": "06/02/2017", "minutes": "10", "tags": ["tm"]}
+{"date": "06/02/2017", "minutes": "80", "tags": ["cryptography"]}

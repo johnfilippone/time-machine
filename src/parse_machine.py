@@ -35,7 +35,7 @@ def generate_csv(records):
     aggregated_records = record_reduce(records, valid_tags)
 
     # write each entry in the aggregated_records dict to a row in the csv table
-    with open("/var/www/html/time-machine.csv", "a") as f:
+    with open("/home/filippone/repos/time-machine/webapp/data/time-machine.csv", "a") as f:
         f.write("tag,population\n")
         for tag, minutes in aggregated_records.iteritems():
             f.write(str(tag) + "," + str(minutes) + "\n")
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     add_record(sys.argv[1:])
 
     # clear csv file
-    open("/var/www/html/time-machine.csv", "w").close()
+    open("/home/filippone/repos/time-machine/webapp/data/time-machine.csv", "w").close()
 
     # pull records and generate csv for D3.js pi chart
     with open("/home/filippone/repos/time-machine/data/records.pl", "r") as f:
