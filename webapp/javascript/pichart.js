@@ -41,8 +41,8 @@ d3.csv("data/time-machine.csv", type, function(error, data) {
         .text(function(d) { return d.data.tag; });
   });
 
-  function type(d) {
-    d.population = +d.population;
-    return d;
-  }
+function type(d) {
+  d.population = +d.population;
+  return d;
+}
 
