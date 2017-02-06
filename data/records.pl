@@ -41,3 +41,5 @@
 {"date": "06/02/2017", "minutes": "5", "tags": ["tm"]}
 {"date": "06/02/2017", "minutes": "5", "tags": ["tm"]}
 {"date": "06/02/2017", "minutes": "5", "tags": ["tm"]}
+{"date": "06/02/2017", "minutes": "5", "tags": ["tm"]}
+{"date": "06/02/2017", "minutes": "10", "tags": ["tm"]}
