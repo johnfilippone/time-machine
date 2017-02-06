@@ -12,3 +12,15 @@
 {"date": "05/02/2017", "minutes": "360", "tags": ["sleep"]}
 {"date": "05/02/2017", "minutes": "60", "tags": ["chillin"]}
 {"date": "05/02/2017", "minutes": "30", "tags": ["chillin"]}
+{"date": "05/02/2017", "minutes": "5", "tags": ["tm"]}
+{"date": "05/02/2017", "minutes": "25", "tags": ["fin"]}
+{"date": "05/02/2017", "minutes": "35", "tags": ["fin"]}
+{"date": "05/02/2017", "minutes": "130", "tags": ["pma"]}
+{"date": "05/02/2017", "minutes": "15", "tags": ["driving"]}
+{"date": "05/02/2017", "minutes": "5", "tags": ["pma"]}
+{"date": "05/02/2017", "minutes": "10", "tags": ["fin"]}
+{"date": "05/02/2017", "minutes": "5", "tags": ["fin"]}
+{"date": "05/02/2017", "minutes": "120", "tags": ["fin"]}
+{"date": "05/02/2017", "minutes": "20", "tags": ["p3"]}
+{"date": "05/02/2017", "minutes": "10", "tags": ["p3"]}
+{"date": "05/02/2017", "minutes": "35", "tags": ["p3"]}
