@@ -3,7 +3,7 @@
 import sys
 import time
 import json
-from record_parsers import get_todays_records, generate_pichart_csv, generate_table_csv, record_reduce
+from record_parsers import get_records_by_date, generate_pichart_csv, generate_table_csv, record_reduce
 
 
 def add_record(args):
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     add_record(sys.argv[1:])
 
     # clear csv files
-    open("/home/filippone/repos/time-machine/webapp/data/time-machine.csv", "w").close()
+    open("/home/filippone/repos/time-machine/webapp/data/pichart.csv", "w").close()
     open("/home/filippone/repos/time-machine/webapp/data/table.csv", "w").close()
 
     # pull records
@@ -41,8 +41,8 @@ if __name__ == "__main__":
         records = f.readlines()
 
     # generate csv for webapp
-    generate_pichart_csv(get_todays_records(records))
-    generate_table_csv(get_todays_records(records))
+    generate_pichart_csv(get_records_by_date(records, time.strftime("%d/%m/%Y")))
+    generate_table_csv(get_records_by_date(records, time.strftime("%d/%m/%Y")))
     
 
     
