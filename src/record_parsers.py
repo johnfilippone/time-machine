@@ -17,7 +17,7 @@ def generate_pichart_csv(records):
     """ pulls records from file and turns them into a csv file that D3.js can understand """
 
     # aggregate similar tags
-    valid_tags = set([" - ".join(json.loads(record)["tags"]) for record in records])
+    valid_tags = set([json.loads(record)["tag"] for record in records])
     aggregated_records = record_reduce(records, valid_tags)
 
     # write each entry in the aggregated_records dict to a row in the csv table
@@ -33,7 +33,7 @@ def generate_table_csv(records):
     """ pulls records from file and turns them into a csv file that D3.js can understand """
 
     # aggregate similar tags
-    valid_tags = set([" - ".join(json.loads(record)["tags"]) for record in records])
+    valid_tags = set([json.loads(record)["tag"] for record in records])
     aggregated_records = record_reduce(records, valid_tags)
 
     # write each entry in the aggregated_records dict to a row in the csv table
@@ -56,7 +56,7 @@ def record_reduce(records, valid_tags):
     aggregated_records = {tag:0 for tag in valid_tags}
     for line in records:
         record = json.loads(line)
-        aggregated_records[" - ".join(record["tags"])] += int(record["minutes"])
+        aggregated_records[record["tag"]] += int(record["minutes"])
 
     # add grey time: time not logged today
     aggregated_records["grey-time"] = 1440 - sum(time_used for time_used in aggregated_records.values())

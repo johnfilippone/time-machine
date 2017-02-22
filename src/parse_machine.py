@@ -6,7 +6,7 @@ import json
 from record_parsers import get_records_by_date, generate_pichart_csv, generate_table_csv, record_reduce
 
 
-def add_record(args):
+def add_record(minutes, tag):
     """ 
     takes user input and turns it into a json record in the records.pl file 
     
@@ -19,8 +19,8 @@ def add_record(args):
 
     record = {
         "date": time.strftime("%d/%m/%Y"),
-        "minutes": args[0],
-        "tags": args[1:]}
+        "minutes": minutes,
+        "tag": tag}
 
     with open("/home/filippone/repos/time-machine/data/records.pl", "a") as f:
         f.write(json.dumps(record) + "\n")
@@ -30,7 +30,7 @@ def add_record(args):
 if __name__ == "__main__":
 
     
-    add_record(sys.argv[1:])
+    add_record(sys.argv[1], sys.argv[2])
 
     # clear csv files
     open("/home/filippone/repos/time-machine/webapp/data/pichart.csv", "w").close()

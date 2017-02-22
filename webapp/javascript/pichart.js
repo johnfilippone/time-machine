@@ -1,4 +1,4 @@
-d3.select("input[value=\"total\"]").property("checked", true);
+//d3.select("input[value=\"total\"]").property("checked", true);
 
 var svg = d3.select("body")
   .append("svg")
@@ -126,7 +126,7 @@ function change(data) {
             div.style("left", d3.event.pageX+10+"px");
             div.style("top", d3.event.pageY-25+"px");
             div.style("display", "inline-block");
-            div.html((d.data.tag)+"<br>"+(d.data.population)+"%");
+            div.html((d.data.tag)+"<br>"+(d.data.population));
         });
     slice
         .on("mouseout", function(d){
@@ -169,7 +169,7 @@ function change(data) {
         .append("text")
         .attr("dy", ".35em")
         .text(function(d) {
-            return (d.data.tag+": "+d.population+"%");
+            return (d.data.tag+": "+d.data.population);
         });
 
     function midAngle(d){
@@ -199,7 +199,7 @@ function change(data) {
             };
         })
         .text(function(d) {
-            return (d.data.tag+": "+d.population+"%");
+            return (d.data.tag+": "+d.data.population);
         });
 
 
