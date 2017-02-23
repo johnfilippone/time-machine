@@ -8,7 +8,7 @@ from record_parsers import get_records_by_date, generate_pichart_csv, generate_t
 
 def add_record(minutes, tag):
     """ 
-    takes user input and turns it into a json record in the records.pl file 
+    takes user input and turns it into a json record in the records file 
     
     inputs:
       args:  [ minutes:int, tags:String[] ]
@@ -22,7 +22,7 @@ def add_record(minutes, tag):
         "minutes": minutes,
         "tag": tag}
 
-    with open("/home/filippone/repos/time-machine/data/records.pl", "a") as f:
+    with open("/home/filippone/repos/time-machine/data/records", "a") as f:
         f.write(json.dumps(record) + "\n")
 
 
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     open("/home/filippone/repos/time-machine/webapp/data/table.csv", "w").close()
 
     # pull records
-    with open("/home/filippone/repos/time-machine/data/records.pl", "r") as f:
+    with open("/home/filippone/repos/time-machine/data/records", "r") as f:
         records = f.readlines()
 
     # generate csv for webapp
