@@ -1,11 +1,12 @@
 webapp
-  generate csv on refresh
+  cgi
+    generate csv on refresh
+    tag filter tree
   understand d3
   data by tag
     stats
     line graph
     calendar boxes
-  tag filter tree
   organization
     move css into seperate file
 
