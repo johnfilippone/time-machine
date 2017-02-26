@@ -1,24 +1,20 @@
 webapp
   generate csv on refresh
   understand d3
-  future
-    tag filter tree
-    data by tag
-      stats
-      line graph
-      calendar boxes
+  data by tag
+    stats
+    line graph
+    calendar boxes
+  tag filter tree
+  organization
+    move css into seperate file
 
 tm
   important
-    find a way to use SMS to call parser machine
     generalize grey time to work for the timespan of the given records
     add unit tests
-  organization
-    move secondary functions out to function libraries
-    move css into seperate file
+    find a way to use SMS to call parser machine
   error checking
-    only allow integers for the first arg of parser machine
     check that there isn't more than 24 hours of logging in one day
-  extra    
-    add usage to parser machine
+  expand usage and help
 
